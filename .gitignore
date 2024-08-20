@@ -1,2 +1,4 @@
 *.pyc
 logs/
+*.mp3
+*.hdf5

@@ -12,3 +12,7 @@ for filename in train/*.mp3; do
     ffmpeg -i "$filename" -f segment -segment_time 1800 -c copy "$filename".%03d.mp3
     rm "$filename"
 done
+
+for filename in *.mp4; do
+    ffmpeg -i "$filename" -f mp3 -ab 192000 -vn "$filename".mp3
+done
